@@ -17,7 +17,7 @@ var obstaclesGroup,
 var score;
 
 var gameOverImg, restartImg;
-//var jumpSound, checkPointSound, dieSound;
+
 
 function preload() {
   trex_running = loadAnimation(
@@ -25,7 +25,7 @@ function preload() {
     "assets/trex3.png",
     "assets/trex4.png"
   );
-  trex_collided = loadImage("assets/trex_collided.png");
+  
 
   groundImage = loadImage("assets/ground2.png");
 
@@ -72,8 +72,7 @@ function setup() {
 
   console.log("Hello" + 5);
 
-  trex.setCollider("circle", 0, 0, 40);
-  // trex.debug = true;
+  
 
   score = 0;
 }
@@ -123,7 +122,7 @@ function draw() {
     trex.velocityY = 0;
 
     //mudar a animação do trex
-    //trex.changeAnimation("collided", trex_collided);
+   
 
     //definir tempo de vida aos objetos do jogo para que nunca sejam destruídos
     obstaclesGroup.setLifetimeEach(-1);
